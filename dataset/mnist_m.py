@@ -55,9 +55,7 @@ def get_mnist_m(train):
         # image pre-processing
     pre_process = transforms.Compose([transforms.Resize(params.image_size),
                                       transforms.ToTensor(),                                     
-                                      transforms.Normalize(
-                                          mean=params.dataset_mean,
-                                          std=params.dataset_std)])
+                                      transforms.Normalize((0.5,), (0.5,))])
 
     dataset_target = GetLoader(
         data_root=os.path.join(params.tgt_dataset_root, 'mnist_m_{}'.format(mode)),

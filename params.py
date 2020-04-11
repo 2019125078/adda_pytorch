@@ -17,20 +17,20 @@ image_size = 28
 
 # params for source dataset
 src_dataset = "MNIST"
-src_encoder_restore = '/home/gaoyi/domain_adapation/ADDA/checkpoints/ADDA-source-encoder-final.pt'
-src_classifier_restore = '/home/gaoyi/domain_adapation/ADDA/checkpoints/ADDA-source-classifier-final.pt'
+src_encoder_restore = 'generated/models/ADDA-source-encoder-final.pt'
+src_classifier_restore = 'generated/models/ADDA-source-classifier-final.pt'
 src_model_trained = True
 
 # params for target dataset
 tgt_dataset = 'mnist_m'
-tgt_dataset_root = '/home/gaoyi/domain_adapation/DANN/data/mnist_m'
-tgt_encoder_restore = '/home/gaoyi/domain_adapation/ADDA/checkpoints/ADDA-target-encoder-final.pt'
+tgt_dataset_root = 'data/mnist_m'
+tgt_encoder_restore = 'generated/models/ADDA-target-encoder-final.pt'
 tgt_model_trained = True
 
 # params for training network
 num_gpu = 1
-num_epochs_pre = 30
-num_epochs = 30
+num_epochs_pre = 10
+num_epochs = 10
 log_step_pre = 20
 log_step = 30
 eval_step_pre = 5 
@@ -42,7 +42,7 @@ image_size = 28
 d_input_dims = 500
 d_hidden_dims = 500
 d_output_dims = 2
-d_model_restore = '/home/gaoyi/domain_adapation/ADDA/checkpoints/ADDA-critic-final.pt'
+d_model_restore = 'generated/models/ADDA-critic-final.pt'
 
 # params for optimizing models
 c_learning_rate = 1e-4
@@ -50,5 +50,5 @@ d_learning_rate = 1e-4
 beta1 = 0.5
 beta2 = 0.9
 
-model_root = '/home/gaoyi/domain_adapation/ADDA/checkpoints'
+model_root = 'generated/models'
 
